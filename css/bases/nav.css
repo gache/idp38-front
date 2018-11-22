@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu {
+    background-color: seagreen;
+    color: white;
+    padding: 10px;
+    display: flex;
+}
+
+.menu > a {
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.menu > a > img {
+    width: 16px;
+}
+
+.menu > a:hover {
+    background-color: #3aad6c;
+}
+
+.menu > a:last-child {
+    margin-left: auto;
+}
