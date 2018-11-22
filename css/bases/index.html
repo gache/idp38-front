@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Bases</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p {
+            color: red !important;
+            border: 1px solid #5C5C5C;
+            padding: 5px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        #main {
+            color: #333;
+        }
+
+        span.word {
+            font-size: 22px;
+            font-style: italic;
+        }
+
+        .another-word {
+            color: orangered;
+        }
+
+        a:link {
+            color: royalblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline; 
+        }
+        a:active {
+            font-size: 20px;
+        }
+        a:focus {
+            outline: none;
+            padding-left: 10px;
+        }
+        a:visited {
+            color:lightseagreen;
+        }
+
+        ul {
+            list-style: none;
+            color: orangered;
+        }
+        .menu>li>a:link {
+            color: inherit;
+        }
+        .first-link ~ li {
+            background-color: hotpink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#">Test</a>
+
+    <ul class="menu">
+        <li class="first-link">
+            <a href="../../html/faq.html">FAQ</a>
+        </li>
+        <li><a href="../../html/table.html">Table</a></li>
+        <li>
+            <a href="#">Item 3</a>
+            <ul>
+                <li><a href="#">Sub item 1</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div id="main">
+        <span class="word another-word">Lorem</span>, ipsum dolor sit amet consectetur adipisicing elit. Facere,
+        expedita?
+        <p style="color: blueviolet">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+</body>
+
+</html>

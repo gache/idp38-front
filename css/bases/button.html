@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+    <style>
+        body { font-family: sans-serif; }
+        .btn {
+            display: inline-block;
+            font: inherit;
+            background-color: royalblue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid #1b2f6b;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2f4faf;
+        }
+        .btn-basic-trans {
+            transition: background-color .8s ease, padding .8s ease, transform 0.8s ease;
+        }
+        .btn-basic-trans:hover {
+            padding: 12px;
+            transform: translateY(4px);
+        }
+        .btn-push {
+            border-width: 0;
+            box-shadow: 0 4px 0 #263f8a;
+        }
+        .btn-push:hover {
+            border-width: 0 0 1px 0;
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #263f8a;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="btn btn-push">Click Me</a>
+    <button class="btn btn-basic-trans">Click Me</button>
+    <input type="submit" value="Click Me" class="btn btn-basic-trans">
+    <div class="btn btn-basic-trans">Click Me</div>
+    <p class="btn btn-push">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, similique illo beatae totam possimus exercitationem doloribus nesciunt aliquid, minus quae porro unde excepturi tempore maxime? A, voluptatem. Adipisci optio possimus necessitatibus doloribus iste reprehenderit? Animi cupiditate voluptates praesentium nostrum reprehenderit sapiente vel blanditiis voluptatibus magni eaque! Unde doloremque, exercitationem corrupti cum laborum ratione rem a quidem minima hic cumque asperiores, laboriosam mollitia consectetur sit! Laboriosam qui eos dolor voluptatibus aliquam. Quo fuga soluta dicta consequuntur dolorem. Consequatur, nam deleniti. Consequuntur officia quod tenetur aliquid, inventore numquam alias error autem molestias molestiae quos dolorum maiores laboriosam necessitatibus delectus vero laudantium natus?</p>
+</body>
+</html>

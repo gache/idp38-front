@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEM</title>
+    <style>
+        body {
+            font-family: Calibri;
+        }
+        .box {
+            border: 1px solid #666;
+            margin-bottom: 16px;
+        }
+        .box > hr {
+            height: 1px;
+            border: none;
+            margin: 0;
+            background-color: #666;
+        }
+        .box-title,
+        .box-content {
+            padding: 8px;
+        }
+        .box-title {
+            margin: 0;
+        }
+        .box-title-blue {
+            color: royalblue;
+        }
+        .box-content > p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Titre de la page</h1>
+
+    <div class="box">
+        <h2 class="box-title box-title-blue">Titre de l'article 1</h2>
+        <hr>
+        <div class="box-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vero!</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2 class="box-title">Titre de l'article 2</h2>
+        <div class="box-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vero!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
