@@ -77,4 +77,4 @@ String.prototype.genpass = function () {
 
 };
 
-console.log("test".genpass());
+console.log("abcdefghik".genpass(5));

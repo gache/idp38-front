@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        body * {
+            padding: 10px;
+            border: 1px solid red;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div onclick="alert(this.tagName + ' Niveau 1')">
+        Niveau 1
+        <div onclick="alert(this.tagName + ' Niveau 2')">
+            Niveau 2
+            <div onclick="alert(this.tagName + ' Niveau 3')">
+                Niveau 3
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Event Listener</h2>
+
+    <div class="level1">
+        Niveau 1
+        <div class="level2">
+            Niveau 2
+            <div class="level3">
+                Niveau 3
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const elems = document.querySelectorAll('.level1, .level2, .level3');
+
+        for (const [index, elem] of elems.entries()) {
+            elem.addEventListener('click', (e) => {
+                if (index == 2) {
+                    return;
+                }
+                alert(elem.tagName + ' Niveau ' + (index + 1));
+            }, false);
+        }
+    </script>
+
+</body>
+
+</html>
