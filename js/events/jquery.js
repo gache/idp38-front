@@ -19,12 +19,22 @@
             return this;
         },
 
+        hasClass: function (name) {
+            return this.elements[0].className.split(' ').indexOf(name) === -1;
+        },
+
         addClass: function (names) {
-            this.elements.forEach(function (elem) {
-                if (!elem.className.includes(names)) {
+            var tmp = this.elements;
+            var that = this;
+
+            tmp.forEach(function (elem) {
+                if (!that.apply(elem).hasClass(name)) {
                     elem.className += elem.className ? ' ' + names : names;
                 }
             });
+
+            this.elements = tmp;
+
             return this;
         },
 

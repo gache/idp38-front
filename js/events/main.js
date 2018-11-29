@@ -6,17 +6,12 @@
 $.ready(function () {
     console.log('DOM loaded');
 
-    $.find('li, #menu').addClass('test');
-
     $.find('li').on('click', function (event) {
         const elem = $.apply(this);
 
-        elem.addClass('supertodo');
-
-        console.log(elem.hasClass('test'));
+        $.find('li').addClass('test');
 
         event.target.style.backgroundColor = '#FF00FF';
     });
-
 
 });
