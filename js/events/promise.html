@@ -7,6 +7,46 @@
     <title>Les promesses</title>
 </head>
 <body>
-    
+
+    <div id="content"></div>
+
+    <script>
+        let promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('HTTP request');
+
+                resolve({
+                    code: 201,
+                    message: 'Created',
+                    body: {
+                        name: 'toto'
+                    }
+                });
+            }, 3000);
+        });
+
+        promise.then(
+            function (response) {
+                console.log(response.body.name);
+                return response.body;
+            }
+        )
+        .then(
+            function(data) {
+                const elem = document.getElementById('content');
+                console.log(data);
+                elem.textContent = data.name;
+
+                return "N'importe quoi...";
+            }
+        )
+        .then(
+            function (message) {
+                console.log(message);
+            }
+        );
+
+    </script>
+
 </body>
 </html>

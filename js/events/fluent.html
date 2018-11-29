@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fluent Interface</title>
+</head>
+
+<body>
+
+    <script>
+        const app = {
+            name: '',
+            setName: function (name) {
+                this.name = name;
+                return this;
+            },
+            getName: function () {
+                return this.name;
+            }
+        }
+
+        app.setName('toto').setName('Chuck').setName('Steven');
+        console.log(app.getName());
+
+        const tableau = [1, 2, 3, 4];
+        tableau[0] = 2;
+        console.log(tableau);
+    </script>
+
+</body>
+
+</html>
