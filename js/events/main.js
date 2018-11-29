@@ -8,10 +8,16 @@ $.ready(function () {
 
     $.find('li').on('click', function (event) {
         const elem = $.apply(this);
-
         $.find('li').addClass('test');
-
         event.target.style.backgroundColor = '#FF00FF';
     });
-
 });
+
+// function test(obj) {
+//     obj.name = 'toto';
+// }
+
+// user = { name: 'Wilfrid' };
+// test(user);
+
+// console.log(user.name);

@@ -34,7 +34,6 @@
             });
 
             this.elements = tmp;
-
             return this;
         },
 
