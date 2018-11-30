@@ -1,5 +1,7 @@
 $(document).ready(function () {
     $('.tasks').on('click', 'li', function (event) {
+        event.preventDefault();
+
         const target = $(event.target);
 
         if (target.parent().hasClass('todo-checkbox')) {
@@ -8,7 +10,9 @@ $(document).ready(function () {
         }
 
         if (target.hasClass('todo-trash')) {
-            $(this).remove();
+            $(this).slideUp(3000, function () {
+                this.remove();
+            });
         }
     });
 
