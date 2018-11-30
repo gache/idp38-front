@@ -1,6 +1,15 @@
 $(document).ready(function () {
-    $('.tasks').on('click', function (event) {
-        console.log(event);
+    $('.tasks').on('click', 'li', function (event) {
+        const target = $(event.target);
+
+        if (target.parent().hasClass('todo-checkbox')) {
+            target.toggleClass("fa-check-square fa-square");
+            $(this).find('.todo-text').toggleClass('todo-text-valid');
+        }
+
+        if (target.hasClass('todo-trash')) {
+            $(this).remove();
+        }
     });
 
     $('.textTask').on('keyup', function (event) {
@@ -8,8 +17,8 @@ $(document).ready(function () {
             if ($(this).val().trim()) {
                 var tmpl =
                     '<li>' +
-                        '<a href="#" class="todo-checkbox"><i class="fa fa-check-square"></i></a>' +
-                        '<span class="todo-text">' + $(this).val() + '</span>' +
+                        '<a href="#" class="todo-checkbox"><i class="fa fa-square"></i></a>' +
+                        '<span class="todo-text" contenteditable="true">' + $(this).val() + '</span>' +
                         '<a href="#"><i class="todo-trash fa fa-trash"></i></a>' +
                     '</li>';
 
