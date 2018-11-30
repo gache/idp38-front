@@ -1,4 +1,13 @@
 
 $(document).ready(function () {
-    $('li').css('color', 'red');
+    let text = '';
+
+    if (text.trim()) {
+        
+    }
+
+    $('#textTask').on('keyup', function (event) {
+        $('#textDisplay').text($(this).val());
+    });
+
 });
