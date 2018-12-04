@@ -1,0 +1,34 @@
+<h1 [style.color]="message == 'hello' ? 'red' : 'green'">Welcome to {{ title }} !</h1>
+
+<input class="form-control" type="text" [(ngModel)]="message">
+<button class="btn btn-primary" [disabled]="!message">Valider</button>
+
+<h2 [innerHTML]="'<span>'+ message +'</span>'"></h2>
+<p [style.color]="changeColor()">{{ message }} {{ changeColor() }}</p>
+
+<h3 [ngClass]="{'favoriteColor': 1 === 1}" [ngStyle]="{'color': 'purple'}">Chuck Norris est un héro</h3>
+{{ 'Le résulat est : ' + (1 + 1) }}
+
+<hr>
+
+<h2 (click)="$event.target.style.color = 'green'">Formulaire</h2>
+
+<input type="text" (input)="changeName($event)" />
+<input type="text" [(ngModel)]="name" />
+
+<p>{{ name }}</p>
+
+<hr>
+
+<p *ngIf="name">Lorem ipsum dolor sit amet.</p>
+
+<div *ngIf="name; else myTpl">Votre nom est {{ name }}</div>
+
+<h1 #myTitle>Hello</h1>
+
+<div>{{ myTitle.firstChild.nodeValue }}</div>
+
+<ng-template #myTpl>
+    <h4>Template cachée</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+</ng-template>
