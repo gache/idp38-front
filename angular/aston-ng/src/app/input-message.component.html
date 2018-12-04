@@ -1,0 +1,17 @@
+<div class="mt-3 mb-2">
+    <textarea 
+        #content
+        class="form-control is-invalid"
+        [ngClass]="{'is-invalid': text.length >= content.maxLength}"
+        [maxLength]="maxLen"
+        [(ngModel)]="text"></textarea>
+
+    <div class="clearfix">
+        <p class="float-left helper" style="color: red;" *ngIf="text.length >= content.maxLength">
+            Le nombre de caractères a atteint sa limite.
+        </p>
+        <p class="float-right">{{ text.length }}/{{ content.maxLength }}</p>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!text">{{ btnName }}</button>
+</div>

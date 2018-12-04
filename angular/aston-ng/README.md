@@ -1,5 +1,11 @@
 # AstonNg
 
+Avant de démarrer le serveur pensez bien à installer les dépendances. Placez-vous dans le répertoire et entrez la commande suivante :
+
+```sh
+npm install
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
 ## Development server
